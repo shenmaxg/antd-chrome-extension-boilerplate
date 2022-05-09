@@ -1,5 +1,5 @@
 import {
-    create, backgroundClient, ChromeMessage, reload
+    create, backgroundClient, ChromeMessage
 } from '../chrome';
 
 export default class Background {

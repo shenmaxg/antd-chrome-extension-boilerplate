@@ -21,6 +21,9 @@ module.exports = {
     "plugins": [
         "react"
     ],
+    "globale": {
+        WRAPPER_CLASS_NAME: true
+    },
     "rules": {
         indent: ["error", 4],
         'react/jsx-indent': ["error", 4],
