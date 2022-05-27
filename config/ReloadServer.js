@@ -1,10 +1,8 @@
 const SSEStream = require('ssestream').default;
-const ChromeReloadPlugin = require('./plugins/CompilerEmitPlugin');
 
-function ReloadServer(app) {
+function ReloadServer(app, compiler) {
     app.get('/reload', (req, res, next) => {
         const sseStream = new SSEStream(req);
-        const compiler = ChromeReloadPlugin.innerCompiler;
         sseStream.pipe(res);
 
         let closed = false;
